@@ -41,10 +41,21 @@ export default function LiveFeed({ events }: LiveFeedProps) {
     return "proprietary social intelligence momentum signal matched";
   };
 
+  // Relative time from the raw ISO timestamp the server sends (_ts), so it reads "2m ago" in the viewer's own time.
+  const rel = (e: any) => {
+    const t = e._ts ? new Date(e._ts).getTime() : NaN;
+    if (isNaN(t)) return e.timestamp || "";
+    const s = Math.max(0, Math.floor((Date.now() - t) / 1000));
+    if (s < 5) return "just now";
+    if (s < 60) return `${s}s ago`;
+    const m = Math.floor(s / 60);
+    if (m < 60) return `${m}m ago`;
+    return `${Math.floor(m / 60)}h ago`;
+  };
+
   return (
     <section className="retro-card p-6 md:p-8 relative overflow-hidden select-none mb-8" id="live-feed-activity">
-      {/* Visual top accent indicator */}
-      <div className="absolute top-0 right-14 w-24 h-4 bg-[#FFC72C] border-b-2 border-l-2 border-black" />
+      {/* (removed the stray floating accent bar) */}
 
       {/* Header */}
       <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-6 pb-4 border-b-4 border-black">
@@ -97,7 +108,7 @@ export default function LiveFeed({ events }: LiveFeedProps) {
                       </span>
                     </div>
                     <span className="font-mono text-[10px] text-black/50 font-black">
-                      ⏱️ {event.timestamp}
+                      ⏱️ {rel(event)}
                     </span>
                   </div>
 
