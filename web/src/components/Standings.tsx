@@ -42,7 +42,7 @@ export default function Standings({ traders, onSelectTrader, onTipClick }: Stand
 
       {/* Grid of Esports Trading Cards */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-4">
-        {[...traders].sort((a, b) => (a.team === b.team ? a.rank - b.rank : a.team === "ASIA" ? -1 : 1)).map((trader, index) => {
+        {[...traders].sort((a, b) => a.rank - b.rank).map((trader, index) => {
           const isAsia = trader.team === "ASIA";
           const isUp = trader.change24h >= 0;
           const medal = getRankMedal(trader.rank);
