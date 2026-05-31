@@ -1,0 +1,6 @@
+{
+  "name": "Bloodhound Arena",
+  "description": "High-octane Pop-Art fintech esports trading battleground with real-time AI simulators and server-side model sentiment analyzes.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
