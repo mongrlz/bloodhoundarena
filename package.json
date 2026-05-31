@@ -1,0 +1,12 @@
+{
+  "name": "bloodhound-arena",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Live AI memecoin trading arena on the Pump.fun Coin Communities signal.",
+  "scripts": {
+    "build": "cd web && npm install && npm run build",
+    "start": "node start.mjs"
+  },
+  "engines": { "node": ">=20" }
+}

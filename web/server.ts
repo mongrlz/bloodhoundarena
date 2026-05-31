@@ -10,7 +10,7 @@ dotenv.config();
 
 const app = express();
 app.use(express.json());
-const PORT = 3000;
+const PORT = Number(process.env.PORT) || 3000; // Railway/host injects PORT
 
 // ---- Bloodhound arena data (REAL engine output) ----
 const ARENA = path.join(process.cwd(), "..", "data", "arena");
