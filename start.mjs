@@ -7,7 +7,7 @@ import { spawn } from "node:child_process";
 const SERVICES = [
   { name: "capture", cmd: "node", args: ["capture.mjs", "--interval", "30"] },
   { name: "prices",  cmd: "node", args: ["prices.mjs", "--interval", "90"] },
-  { name: "arena",   cmd: "node", args: ["arena.mjs", "--rounds", "1000000", "--every", "1200"] },
+  // { name: "arena", cmd: "node", args: ["arena.mjs", "--rounds", "1000000", "--every", "180"] }, // PAUSED to save OpenRouter credits — uncomment + restart to go live for launch
   { name: "web",     cmd: "node", args: ["dist/server.cjs"], opts: { cwd: "web", env: { ...process.env, NODE_ENV: "production" } } },
 ];
 

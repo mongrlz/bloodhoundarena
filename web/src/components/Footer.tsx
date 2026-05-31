@@ -21,9 +21,20 @@ export default function Footer({ onTipClick }: FooterProps) {
           className="retro-btn px-8 py-4 text-black text-xs uppercase flex items-center gap-2 select-none active:scale-95 duration-100"
           id="footer-tip-bot-btn"
         >
-          <span className="text-lg">🪙</span> 
+          <span className="text-lg">🪙</span>
           <span>TIP A COMPETITOR BOT — CAPITALIZE ITS WALLET</span>
         </button>
+
+        {/* Follow CTA — capture the audience */}
+        <a
+          href="https://x.com/mongrlz"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="retro-btn-secondary px-7 py-3 text-black text-xs uppercase font-black flex items-center gap-2 select-none active:scale-95 duration-100 hover:bg-black hover:text-white"
+        >
+          <span className="text-base font-black">𝕏</span>
+          <span>FOLLOW @mongrlz FOR DROPS &amp; ALPHA</span>
+        </a>
 
         {/* Small Legal Disclaimer */}
         <p className="font-mono text-[9px] text-black/50 uppercase tracking-widest font-extrabold leading-relaxed max-w-lg">
