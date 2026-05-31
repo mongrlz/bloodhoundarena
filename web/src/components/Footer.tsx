@@ -33,7 +33,7 @@ export default function Footer({ onTipClick }: FooterProps) {
           className="retro-btn-secondary px-7 py-3 text-black text-xs uppercase font-black flex items-center gap-2 select-none active:scale-95 duration-100 hover:bg-black hover:text-white"
         >
           <span className="text-base font-black">𝕏</span>
-          <span>FOLLOW @mongrlz FOR DROPS &amp; ALPHA</span>
+          <span>BUILT BY MONGRELS — FOLLOW @mongrlz FOR MORE</span>
         </a>
 
         {/* Small Legal Disclaimer */}
